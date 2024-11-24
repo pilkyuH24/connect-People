@@ -1,9 +1,7 @@
+// server.js
 const WebSocket = require('ws');
 
-// Use the PORT environment variable provided by Render, or fallback to 4000
-const PORT = process.env.PORT || 4000;
-
-const wss = new WebSocket.Server({ port: PORT });
+const wss = new WebSocket.Server({ port: 4000 });
 
 wss.on('connection', (ws) => {
   console.log('New client connected');
@@ -12,7 +10,6 @@ wss.on('connection', (ws) => {
     const messageString = message.toString();
     console.log('Received:', messageString);
 
-    // Broadcast the message to all connected clients
     wss.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
         client.send(messageString);
@@ -25,4 +22,4 @@ wss.on('connection', (ws) => {
   });
 });
 
-console.log(`WebSocket server is running on ws://localhost:${PORT}`);
+console.log('WebSocket 서버가 ws://localhost:4000에서 실행 중입니다.');

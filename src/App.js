@@ -34,8 +34,7 @@ function App() {
 
   useEffect(() => {
     // Establish WebSocket connection
-    // ws.current = new WebSocket("ws://localhost:4000");
-    ws.current = new WebSocket("wss://connect-people.onrender.com");
+    ws.current = new WebSocket("ws://localhost:4000");
 
     ws.current.onopen = () => {
       console.log("WebSocket connection established");
