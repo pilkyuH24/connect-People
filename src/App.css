@@ -1,38 +1,185 @@
-.App {
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* NodeInfo dynamic styling */
+.node-info {
+  position: fixed;
+  background: #f9f9f9; /* Light gray for a modern look */
+  padding: 15px; /* More comfortable padding */
+  border: 1px solid #ccc; /* Softer border color */
+  border-radius: 8px; /* Slightly more rounded corners */
+  z-index: 1000;
+  max-width: 300px;
+  pointer-events: none;
+  word-wrap: break-word;
+  font-family: "Arial", sans-serif; /* Clean and readable font */
+  font-size: 14px; /* Standardized font size */
+  line-height: 1.5; /* Better readability with proper line spacing */
+}
+
+/* Add shadow for better visibility */
+.node-info {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Subtle but deeper shadow */
+}
+
+/* Highlight class for emphasis */
+.node-info .highlight {
+  color: red !important;
+  font-weight: bold !important;
+  text-decoration: underline; /* Add underline for extra emphasis */
+}
+
+/* Form Container */
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 500px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Title */
+.form-title {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Form Section */
+.form-section {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Options Grid */
+.options-grid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Individual Option */
+.option {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  border-color: lightblue;
+  background-color: #f0f8ff;
+}
+
+.option.selected {
+  border: 2px solid blue;
+  background-color: #e6f7ff;
+}
+
+/* Submit Button */
+.form-submit {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: blue;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.form-submit:hover {
+  background: darkblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-submit:disabled {
+  background: lightgray;
+  cursor: not-allowed;
 }
+
+.connection-filters {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 1000;
+  width: 200px;
+  font-family: Arial, sans-serif;
+}
+
+.connection-filters h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  accent-color: initial;
+}
+
+/* Change text color dynamically when checked */
+.checkbox-label input[type="checkbox"]:checked + span {
+  font-weight: bold;
+}
+
+/* Blue label */
+.checkbox-label.blue input[type="checkbox"] {
+  accent-color: blue;
+}
+
+.checkbox-label.blue span {
+  color: blue;
+}
+
+/* Green label */
+.checkbox-label.green input[type="checkbox"] {
+  accent-color: green;
+}
+
+.checkbox-label.green span {
+  color: green;
+}
+
+/* Black label (last checkbox) */
+.checkbox-label.black input[type="checkbox"] {
+  accent-color: black;
+}
+
+.checkbox-label.black span {
+  color: black;
+}
+
