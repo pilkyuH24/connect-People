@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌐 **Connect People - A Dynamic Node Visualization App**
 
-## Getting Started
+**Connect People** is a web application designed to visually represent and interact with nodes that symbolize people. Each node contains individual data such as name, job, location, nationality, and hobbies. The app leverages MongoDB for data storage and Vercel for deployment, offering a smooth and interactive experience. 🚀
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ **Key Features**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🎨 **Dynamic Node Visualization**
+- 🧩 Nodes dynamically render on a canvas, with connections drawn based on common attributes (hobbies, location, nationality).
+- 🎥 Smooth animations and real-time interactivity.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 📝 **Profile Setup**
+- 👤 Users can set up their profile with details like name, job, location, nationality, and hobbies.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔍 **Interactive Filters**
+- 🕵️‍♂️ Users can filter connections based on specific criteria (e.g., hobbies, location, nationality).
 
-## Learn More
+### 🛠️ **Backend Integration**
+- 💾 Powered by MongoDB for storing user profiles and nodes.
+- 📡 Custom API endpoints (`/api/addNode` and `/api/getNodes`) for adding new profiles and fetching node data.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💻 **Technical Stack**
+- **Frontend**: ⚛️ React with Next.js.
+- **Backend**: 🟢 Node.js, 🍃 MongoDB (Atlas).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Alt text](/public/screenshot.png)

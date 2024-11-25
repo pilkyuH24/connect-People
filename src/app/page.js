@@ -20,7 +20,7 @@ function Home() {
     location: true,
     nationality: false,
   });
-
+  
   const [meData, setMeData] = useState({
     name: "",
     job: null,
