@@ -26,5 +26,8 @@
 - **Frontend**: ⚛️ React with Next.js.
 - **Backend**: 🟢 Node.js, 🍃 MongoDB (Atlas).
 
+[Visit Demo](https://connect-people.vercel.app/) ✅
 
+![Alt text](/public/profile.png)
 ![Alt text](/public/screenshot.png)
+

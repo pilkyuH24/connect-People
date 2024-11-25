@@ -178,7 +178,7 @@ body {
 }
 
 .checkbox-label.black input[type="checkbox"] {
-  color: #000000; /* black */
+  color: #7f7503; /* black */
 }
 
 .checkbox-label.fuchsia span {
@@ -190,5 +190,5 @@ body {
 }
 
 .checkbox-label.black span {
-  color: #000000;
+  color: #7f7503;
 }

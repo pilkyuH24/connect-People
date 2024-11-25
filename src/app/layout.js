@@ -15,6 +15,11 @@ const geistMono = localFont({
 export const metadata = {
   title: 'Node Visualization App',
   description: 'Visualize and interact with connection nodes dynamically.',
+  icons: {
+		icon: "/neural.ico",
+    shortcut: "/neural.ico",
+		apple: "/neural.ico",
+  }
 };
 
 export default function RootLayout({ children }) {
