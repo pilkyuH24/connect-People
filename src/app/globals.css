@@ -2,20 +2,193 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow: hidden;
+  background-color: rgb(27, 22, 34);
+}
+
+
+/* NodeInfo dynamic styling */
+.node-info {
+  position: fixed;
+  background: #f9f9f9; /* Light gray for a modern look */
+  padding: 15px; /* More comfortable padding */
+  border: 1px solid #ccc; /* Softer border color */
+  border-radius: 8px; /* Slightly more rounded corners */
+  z-index: 1000;
+  max-width: 300px;
+  pointer-events: none;
+  word-wrap: break-word;
+  font-family: "Arial", sans-serif; /* Clean and readable font */
+  font-size: 14px; /* Standardized font size */
+  line-height: 1.5; /* Better readability with proper line spacing */
+}
+
+/* Add shadow for better visibility */
+.node-info {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Subtle but deeper shadow */
+}
+
+/* Highlight class for emphasis */
+.node-info .highlight {
+  color: red !important;
+  font-weight: bold !important;
+  text-decoration: underline; /* Add underline for extra emphasis */
+}
+
+/* Form Container */
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 550px;
+  text-align: center;
+}
+
+/* Title */
+.form-title {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Form Section */
+.form-section {
+  margin-bottom: 20px;
+}
+
+.text-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Options Grid */
+.options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Individual Option */
+.option {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  border-color: lightblue;
+  background-color: #f0f8ff;
+}
+
+.option.selected {
+  border: 2px solid blue;
+  background-color: #e6f7ff;
+}
+
+/* Submit Button */
+.form-submit {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-submit:hover {
+  background: darkblue;
+}
+
+.form-submit:disabled {
+  background: lightgray;
+  cursor: not-allowed;
+}
+
+.connection-filters {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 1000;
+  width: 200px;
+  font-family: Arial, sans-serif;
+}
+
+
+.connection-filters {
+  width: max-content;
+}
+
+.connection-filters h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 간격 조정 */
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid #d1d5db; 
+  border-radius: 4px; 
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+  background-color: currentColor;
+  border-color: currentColor;
+}
+
+.checkbox-label.fuchsia input[type="checkbox"] {
+  color: #e879f9; /* fuchsia-400 */
+}
+
+.checkbox-label.green input[type="checkbox"] {
+  color: #10b981; /* green-500 */
+}
+
+.checkbox-label.black input[type="checkbox"] {
+  color: #000000; /* black */
+}
+
+.checkbox-label.fuchsia span {
+  color: #e879f9;
+}
+
+.checkbox-label.green span {
+  color: #10b981;
+}
+
+.checkbox-label.black span {
+  color: #000000;
 }
