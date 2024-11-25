@@ -3,8 +3,8 @@ import { MongoClient } from 'mongodb';
 const uri = process.env.MONGODB_URI;
 const options = {};
 
+let client;
 let clientPromise;
-
 
 if (!process.env.MONGODB_URI) {
   throw new Error('process.env.MONGODB_URI error' + ' MONGODB_URI:', process.env.MONGODB_URI);
