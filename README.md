@@ -53,6 +53,7 @@ export async function GET(request) {
 
   return NextResponse.json({ changes: updatedData, lastUpdated: Date.now() });
 }
+```
 
 ### 🔹 Frontend (Polling Implementation)
 - Automatically fetches updates every 5 seconds.
@@ -69,7 +70,7 @@ useEffect(() => {
   const interval = setInterval(fetchData, 5000);
   return () => clearInterval(interval);
 }, [lastUpdated]);
-
+```
 
 ---
 
