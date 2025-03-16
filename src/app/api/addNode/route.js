@@ -27,6 +27,7 @@ export async function POST(request) {
       const insertResult = await db.collection('people').insertOne({
         ...nodeData,
         createdAt: new Date(),
+        updatedAt: new Date(), // new Node
       });
       console.log('Insert result:', insertResult);
     } catch (error) {
